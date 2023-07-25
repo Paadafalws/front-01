@@ -1,0 +1,10 @@
+.sidebar {
+    height: 100%; /* Defina a altura desejada da sidebar */
+    width: 200px; /* Defina a largura desejada da sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f8f9fa; /* Cor de fundo da sidebar */
+    padding-top: 20px;
+  }
+  
