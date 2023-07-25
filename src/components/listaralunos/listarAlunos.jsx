@@ -8,7 +8,7 @@ class ListarAlunos extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:8000/alunos/")
+    fetch("http://15.229.23.203:8000/alunos/")
       .then(response => {
         if (response.status > 400) {
           // Código do comportamento em caso de problema na req
@@ -27,7 +27,7 @@ class ListarAlunos extends Component {
 
   handleDelete = (alunoId) => {
     // Enviar a requisição de delete para o servidor
-    fetch(`http://localhost:8000/alunos/${alunoId}/`, {
+    fetch(`http://15.229.23.203:8000/alunos/${alunoId}/`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'

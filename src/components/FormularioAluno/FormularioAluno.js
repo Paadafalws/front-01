@@ -30,7 +30,7 @@ class FormularioAluno extends Component {
     formData.append('celular', this.state.celular);
     formData.append('foto', this.state.foto);
 
-    fetch('http://localhost:8000/alunos/', {
+    fetch('http://15.229.23.203:8000/alunos/', {
       method: 'POST',
       body: formData,
     })
