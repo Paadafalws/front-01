@@ -16,7 +16,7 @@ function EditarAluno() {
   // Função para buscar os detalhes do aluno com base no ID
   const buscarDetalhesAluno = useCallback(async () => {
     try {
-      const response = await fetch(`http://15.229.23.203:8000/alunos/${id}`);
+      const response = await fetch(`http://15.229.23.203:8000/EditarAluno/${id}`);
       if (response.ok) {
         const data = await response.json();
         setAluno(data);
@@ -38,23 +38,24 @@ function EditarAluno() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://15.229.23.203:8000/alunos/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(aluno),
-      });
-      if (response.ok) {
-        console.log('Aluno atualizado com sucesso!');
-        // Redirecionar para a página de detalhes do aluno ou para a lista de alunos
-        // Se necessário, você pode usar uma biblioteca de roteamento como o react-router-dom para lidar com a navegação.
-      } else {
-        console.error('Erro ao atualizar aluno');
+        const response = await fetch(`http://15.229.23.203:8000/editaralunos/${id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(aluno),
+        });
+      
+        if (response.ok) {
+          console.log('Aluno atualizado com sucesso!');
+          // Redirecionar para a página de detalhes do aluno ou para a lista de alunos
+          // Se necessário, você pode usar uma biblioteca de roteamento como o react-router-dom para lidar com a navegação.
+        } else {
+          console.error('Erro ao atualizar aluno');
+        }
+      } catch (error) {
+        console.error('Erro ao atualizar aluno', error);
       }
-    } catch (error) {
-      console.error('Erro ao atualizar aluno', error);
-    }
   };
 
   // Chamar a função para buscar os detalhes do aluno quando a página for carregada
