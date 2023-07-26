@@ -1,0 +1,64 @@
+/* Estilo para o link do Navbar */
+.nav-link {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    box-shadow: 0 0 0 2px #999fa5;
+    border-radius: 12px;
+    margin: auto;
+  }
+  
+  /* Estilo para o link do Navbar quando o mouse estiver sobre ele (hover) */
+  .nav-link:hover {
+    background-color: #999fa5;
+  }
+  
+  /* Estilo para o menu suspenso no Navbar */
+  .nav-dropdown {
+
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+  
+  /* Estilo para os itens do menu suspenso no Navbar */
+  .dropdown-item {
+    color: #212529;
+    padding: 0.5rem 1rem;
+    display: block;
+    width: 100%;
+    clear: both;
+    font-weight: 400;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+  /* Estilo para os itens do menu suspenso no Navbar quando o mouse estiver sobre eles (hover) */
+  .dropdown-item:hover {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  /* Estilo para a marca do Navbar (logo) */
+  .navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Estilo para o ícone do botão de menu (navbar-toggler) */
+  .navbar-toggler-icon {
+    color: #fff;
+  }
+  
+  /* Estilo para o botão de menu quando estiver expandido */
+  .navbar-toggler[aria-expanded="true"] {
+    background-color: #fff;
+    border: 1px solid #999fa5;
+    border-radius: 12px;
+  }
+  

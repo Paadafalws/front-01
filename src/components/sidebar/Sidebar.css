@@ -1,10 +1,48 @@
-.sidebar {
-    height: 100%; /* Defina a altura desejada da sidebar */
-    width: 200px; /* Defina a largura desejada da sidebar */
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #f8f9fa; /* Cor de fundo da sidebar */
-    padding-top: 20px;
-  }
+/* Estilos para o Sidebar (Navbar Lateral) */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #f8f9fa; /* Cor de fundo do sidebar */
+  padding-top: 1rem;
+  
+
+}
+
+#sidebar h3 {
+  color: #333; /* Cor do texto do logo ou nome */
+  margin-bottom: 2rem;
+  
+}
+
+#sidebar ul {
+  padding-left: 0;
+  
+}
+
+#sidebar ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 0 2px hsl(210, 6%, 62%);
+  border-radius: 12px;
+  
+
+}
+
+#sidebar ul li a {
+  color: #333; /* Cor do texto dos links */
+
+  text-decoration: none;
+}
+
+#sidebar li:hover {
+
+background-color: rgb(0, 132, 255)
+;}
+
+#sidebar ul li a:hover {
+  color: #f8f9fa;
+  ;}
   

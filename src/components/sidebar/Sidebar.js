@@ -1,27 +1,27 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
-import user from '../../Imagens/user.png'
-import { NavLink } from "react-router-dom";
-import './Sidebar.css'; // Estilos personalizados para a sidebar
+import { Link } from 'react-router-dom'; // Caso esteja usando o React Router
+import './Sidebar.css'; // Importe o arquivo de estilo para o Navbar Lateral
 
-const Sidebar = () => {
+function Sidebar() {
   return (
-    <Nav className="sidebar">
-      <img src={user} className='foto' alt="teta"/>
-      <Nav.Item>
-        <Nav.Link href="#home">Home</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <NavLink to="/about">About</NavLink>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href="#services">Services</Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link href="#contact">Contact</Nav.Link>
-      </Nav.Item>
-    </Nav>
+    <aside id="sidebar" className="bg-light">
+      <div className="p-4">
+        <h3>LOGO</h3>
+        <ul className="list-unstyled components">
+          <li>
+            <Link to="/">Página Inicial</Link>
+          </li>
+          <li>
+            <Link to="/about">sobre</Link>
+          </li>
+          <li>
+            <Link to="/contato">Dashbord com power bi ou python</Link>
+          </li>
+          {/* Adicione mais links conforme necessário */}
+        </ul>
+      </div>
+    </aside>
   );
-};
+}
 
 export default Sidebar;

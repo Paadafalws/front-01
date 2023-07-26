@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './FormularioAluno.css';
+import { Alert } from 'react-bootstrap';
 
 class FormularioAluno extends Component {
   state = {
@@ -8,6 +10,8 @@ class FormularioAluno extends Component {
     data_nascimento: '',
     celular: '',
     foto: null,
+    error:null,
+    sucess:false,
   };
 
   handleChange = (e) => {
@@ -34,21 +38,50 @@ class FormularioAluno extends Component {
       method: 'POST',
       body: formData,
     })
-      .then((response) => {
-        if (response.status === 201) {
-          // Aluno adicionado com sucesso
-          // Atualize a lista de alunos, se necessário
-          // Você pode fazer isso emitindo um evento para o componente pai ou usando Redux, por exemplo.
-          console.log('Aluno adicionado com sucesso!');
-        } else {
-          // Tratar erros, se necessário
-          console.error('Erro ao adicionar aluno');
-        }
-      })
-      .catch((error) => {
-        // Tratar erros, se necessário
-        console.error('Erro ao adicionar aluno', error);
-      });
+    .then((response) => {
+      if (response.status === 201) {
+        // Aluno adicionado com sucesso
+        console.log('Aluno adicionado com sucesso!');
+        // Restaurar o estado para limpar os campos após o envio bem-sucedido
+        this.setState({
+          nome: '',
+          rg: '',
+          cpf: '',
+          data_nascimento: '',
+          celular: '',
+          foto: null,
+          error: null, // Limpar a mensagem de erro
+          sucess: true, // Ativar o estado de sucesso
+        });
+        setTimeout(() =>{
+          this.setState({ success:false }); 
+        },3000);
+      } else {
+        // Tratar erros
+        return response.json().then((data) =>{
+          if (data.foto){
+            throw new Error(data.foto[0]); // Lançar o erro com a mensagem recebida do servidor
+          }
+          if (data.rg){
+            throw new Error(data.rg[0]); // Lançar o erro com a mensagem recebida do servidor
+          }
+
+
+        });
+        
+      }
+    })
+    .catch((error) => {
+      // Atualizar o estado com o erro
+      this.setState({ error: error.message, sucess: false }); // Certificar-se de definir o success como false em caso de erro
+  
+      // Definir um atraso de 3 segundos para redefinir o estado de erro para falso
+      setTimeout(() => {
+        this.setState({ error: null });
+      }, 3000); // 3000 milissegundos = 3 segundos
+    });
+
+
   };
 
   render() {
@@ -100,10 +133,24 @@ class FormularioAluno extends Component {
           />
         </div>
         <div>
-          <label>Foto:</label>
+          <label>Arquivo:</label>
           <input type="file" name="foto" onChange={this.handleFileChange} />
         </div>
-        <button type="submit">Adicionar Aluno</button>
+        <button type="submit">Adicionar Cliente</button>
+
+        {/* Exibir o Alert se houver erro */}
+        {this.state.error && (
+          <Alert variant="danger">
+            {this.state.error}
+          </Alert>
+        )}
+
+        {/* Exibir mensagem de sucesso se o formulário foi enviado com sucesso */}
+        {this.state.sucess && (
+          <Alert variant="success">
+            Aluno adicionado com sucesso!
+          </Alert>
+        )}
       </form>
     );
   }

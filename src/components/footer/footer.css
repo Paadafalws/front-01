@@ -1,0 +1,8 @@
+.fotome{
+ 
+    border-radius: 50%;
+    height: 100px; /* Defina a altura desejada da sidebar */
+    width: 100px; /* Defina a largura desejada da sidebar */
+    background-color: #f8f9fa; /* Cor de fundo da sidebar */
+   
+}

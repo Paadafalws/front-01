@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import './listarAlunos.css'
+import Modaledit from '../modaledit/modaledit';
 
 
 class ListarAlunos extends Component {
@@ -49,25 +51,42 @@ class ListarAlunos extends Component {
   handleEdit = (alunoId) => {
     // Redirecionar para a página de edição do aluno com base no ID
     // Exemplo: /editar-aluno/1 (para editar o aluno com ID 1)
-    window.location.href = `/editar-aluno/${alunoId}`;
+    window.location.href = `/EditarAluno/${alunoId}`;
   };
 
   render() {
     return (
       <div>
-        {this.state.data.map(aluno => (
-          <div key={aluno.id} className='App-table'>
-            <img src={aluno.foto} alt={aluno.nome} className='foto'/>
-            <h2>{aluno.nome}</h2>
-            <h2>{aluno.rg}</h2>
-            <h2>{aluno.cpf}</h2>
-            <a href={aluno.foto}> Link foto</a>
+      <table className="table table-bordered table-striped ">
+        <thead>
+          <tr>
+            <th className='texto'>Nome</th>
+            <th className='texto'>RG</th>
+            <th className='texto'>CPF</th>
+            <th className='texto'>Link Arquivo</th>
+            <th className='texto'>Actions</th>
+            <th className='texto'>Editar</th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.state.data.map(aluno => (
+            <tr key={aluno.id}>
+              <td className='texto'>{aluno.nome}</td>
+              <td className='texto'>{aluno.rg}</td>
+              <td className='texto'>{aluno.cpf}</td>
+              <td className='texto' ><a href={aluno.foto}>Link Arquivo</a></td>
+              <td>
+                <button onClick={() => this.handleDelete(aluno.id)} className="btn btn-danger">Delete</button>
 
-            <button onClick={() => this.handleDelete(aluno.id)}>Delete</button>
-            <button onClick={() => this.handleEdit(aluno.id)}>Edit</button>
-          </div>
-        ))}
-      </div>
+              </td>
+              <td>
+              <button onClick={() => this.handleEdit(aluno.id)} className="btn btn-primary"> Editar</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
     );
   }
 }

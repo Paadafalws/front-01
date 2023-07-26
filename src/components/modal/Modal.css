@@ -1,0 +1,54 @@
+/* Estilo para o botão "Cadastrar Clientes" */
+.btn-custom {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-custom:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Estilo para o cabeçalho do modal */
+  .modal-header {
+    background-color: #6c757d;
+    color: #fff;
+    border-bottom: none;
+  }
+  
+  /* Estilo para o título do modal */
+  .modal-title {
+    font-size: 24px;
+  }
+  
+  /* Estilo para o corpo do modal */
+  .modal-body {
+    padding: 20px;
+  }
+  
+  /* Estilo para o rodapé do modal */
+  .modal-footer {
+    border-top: none;
+  }
+  
+  /* Estilo para o botão "Cancelar" no rodapé do modal */
+  .modal-footer .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  

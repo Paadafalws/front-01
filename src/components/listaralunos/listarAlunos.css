@@ -1,0 +1,25 @@
+/* Estilos para a classe .hostil */
+.hostil {
+    background-color: #e20909; /* Cor de fundo vermelha */
+    border: 2px solid #c0392b; /* Cor da borda escura */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 2px 2px 5px #888; /* Sombra */
+  }
+  
+  /* Estilos para o texto com classe .hostil-text */
+  .hostil-text {
+    color: #fff; /* Cor do texto branco */
+    font-weight: bold; /* Texto em negrito */
+  }
+  
+  /* Estilos para o link com classe .hostil-link */
+  .hostil-link {
+    color: #fff; /* Cor do link branco */
+    text-decoration: none; /* Remover sublinhado do link */
+    margin-right: 10px; /* Margem à direita do link */
+  }
+
+  .texto{
+    color: #fff;
+  }
+  
