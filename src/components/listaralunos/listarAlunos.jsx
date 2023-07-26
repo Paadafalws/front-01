@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './listarAlunos.css'
-import Modaledit from '../modaledit/modaledit';
+
 
 
 class ListarAlunos extends Component {

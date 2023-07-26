@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 
 function EditarAluno() {
@@ -14,7 +14,7 @@ function EditarAluno() {
   });
 
   // Função para buscar os detalhes do aluno com base no ID
-  const buscarDetalhesAluno = async () => {
+  const buscarDetalhesAluno = useCallback(async () => {
     try {
       const response = await fetch(`http://15.229.23.203:8000/alunos/${id}`);
       if (response.ok) {
@@ -26,7 +26,7 @@ function EditarAluno() {
     } catch (error) {
       console.error('Erro ao buscar detalhes do aluno', error);
     }
-  };
+  }, [id]);
 
   // Função para atualizar o estado quando os campos de edição do aluno forem alterados
   const handleChange = (e) => {
@@ -60,7 +60,7 @@ function EditarAluno() {
   // Chamar a função para buscar os detalhes do aluno quando a página for carregada
   useEffect(() => {
     buscarDetalhesAluno();
-  }, []);
+  }, [buscarDetalhesAluno]);
 
   return (
     <form onSubmit={handleSubmit} encType="multipart/form-data">
