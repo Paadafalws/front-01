@@ -1,0 +1,23 @@
+/* about.css */
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fcd5fc; /* Cor de fundo temática Barbie */
+    color: #ff69b4; /* Cor do texto temática Barbie */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .barbie-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .barbie-text {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  

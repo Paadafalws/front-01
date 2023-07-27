@@ -1,0 +1,65 @@
+/* pesquisa.css */
+
+/* Estilos para o contêiner da barra de pesquisa */
+.pesquisa {
+    margin: 20px;
+  }
+  
+  /* Estilos para o cabeçalho h2 */
+  .pesquisa h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para o cabeçalho h3 */
+  .pesquisa h3 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para o contêiner da barra de pesquisa */
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para a barra de pesquisa */
+  .barra {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  /* Estilos para o ícone de pesquisa */
+  .search-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  /* Estilos para os resultados da pesquisa */
+  .aluno {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .aluno img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .botao-maneiro {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  

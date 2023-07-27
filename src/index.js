@@ -8,6 +8,7 @@ import About from './pages/teste/about';
 import EditarAluno from './pages/editaraluno/EditarAluno';
 
 
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

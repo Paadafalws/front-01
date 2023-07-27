@@ -6,3 +6,19 @@
     background-color: #f8f9fa; /* Cor de fundo da sidebar */
    
 }
+
+.Footer {
+    margin-top: 10%;
+    color: #074657;
+    background-color: aliceblue;
+  }
+  
+  .foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+  }
+  

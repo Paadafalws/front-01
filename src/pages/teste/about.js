@@ -1,10 +1,15 @@
 import React from 'react';
+import './about.css'; // Importe o arquivo CSS para aplicar os estilos temáticos
 
 const About = () => {
   return (
-    <div>
-      <h2>About Page</h2>
-      <p>Esta é a página Sobre nós.</p>
+    <div className="about-container">
+      <h2 className="barbie-title">Ambrocats</h2>
+      <p className="barbie-text">Anna Betraliz Perlin</p>
+      <p className="barbie-text">My wife</p>
+      <br />
+      <p className="barbie-text">Julia Oliveira</p>
+      <p className="barbie-text">Menina que ajudou-a criar o insta</p>
     </div>
   );
 };
