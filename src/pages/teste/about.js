@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="about-container">
       <h2 className="barbie-title">Ambrocats</h2>
-      <p className="barbie-text">Anna Betraliz Perlin</p>
+      <p className="barbie-text">Anna Betraliz Perlin ou a ... </p>
       <p className="barbie-text">My wife</p>
       <br />
       <p className="barbie-text">Julia Oliveira</p>
